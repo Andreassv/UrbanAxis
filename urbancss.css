@@ -1,2 +1,373 @@
 @charset "utf-8";
 /* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*----------typografi----------*/
+h1, h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+h1 {
+    font-size: 6.5vw;
+}
+h2 {
+    font-size: 5.5vw;
+    font-style: italic;
+}
+h3 {
+    font-size: 4.5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 400;    
+}
+h4, h5, li, p, figcaption {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h4, p {
+    font-size: 2.5vw; 
+    font-weight: 400;    
+}
+h5, figcaption {
+    font-weight: bold;
+    font-size: 2vw;   
+}
+li {
+    font-size: 1.5vw;
+}
+.navbar li {
+    font-size: 2.8vw;
+}
+/*----------style----------*/
+body {
+    background-color: #e0daba;
+}
+.current {
+    text-decoration: underline;
+}
+article {
+    margin: 0.5vw 5vw;
+}
+li {
+    list-style-type: none;
+}
+.hidden {
+    display: none;
+}
+/*----------index svg så de fungere som links i alle browser----------*/
+/* SVG virker i alle browser, også når de er indsat i et object, 
+dog hvis de skal fungere som links i et object er det lidt mere kompliceret*/
+a.svg {
+    margin: 3vw 5vw;
+    background-color: #537249;
+    border: solid #22262a 0.25vw;
+    position: relative;
+    display: block; /* er insat for at få det til at virke i Crome og Safari*/
+    z-index: 1; /* er insat for at få det til at virke i IE*/
+}
+a.svg:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+a object {
+    z-index: -1;
+    pointer-events: none; /* er insat for at få det til at virke i Firefox*/
+}
+/*----------header----------*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+header img {
+    width: 8vw;
+    margin-right: 2vw;
+}
+/*----------nav----------*/
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #537249;  
+    color: white;
+    margin-bottom: 2vw;
+    z-index: -1;
+}
+.navbar h3 {
+    margin: 2.55vw 2vw;  
+}
+.dropbtn {
+    background-color: #22262a;
+    padding: 2.3vw;
+    font-size: 5vw;
+    position: absolute;
+    right: 0;
+}
+.dropdown {
+    right: 0;
+    overflow: hidden;
+}
+.navbar .dropbtn {
+    cursor: pointer;   
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: #22262a;
+}
+.dropdown-content {
+    display: none;
+    background-color: #537249; 
+    min-width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    text-align: left;
+    color: #fff;
+    padding: 2vw 0 2vw 2.5vw;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #22262a;
+    text-decoration: underline;
+}
+.show {
+    display: block;
+}
+/*----------slider----------*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+} 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(105, 185, 217, 0.5)
+} 
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+} 
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+/*----------Maps----------*/
+.active {
+    background-color: #717171;
+}
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+article {
+    margin: 0.75vw;
+}
+/*----------footer----------*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #537249;
+    margin-top: 5vw;
+    padding: 5vw 0;
+    flex-direction: row;
+    column-count: 2;
+}
+footer section {
+    width: 46vw;
+    margin: 2vw 0;
+}
+footer li a, footer h5 a {
+    list-style-type: none;
+    text-transform: initial;
+    text-decoration: none;
+    margin: 1.25vw;
+    color: #000000;
+}
+footer a:hover {
+    font-weight: bold;
+    color: #fff;
+}
+.buttom {
+    margin-top: 2vw;
+    display: block;
+    text-align: center;
+}
+/*----------info----------*/
+main h4 {
+    text-transform: uppercase;
+}
+main li {
+    margin: 0.75em 0;
+}
+main article i {
+    font-size: 1.5vw;
+    padding: 0.1em;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main div {
+    width: 100vw;
+}
+main article,
+main section,
+main form {
+    width: 100vw;
+    margin: 0.5em;
+}
+form input, 
+form button {
+    padding: 0 0.5em;
+    margin: 0.75em 0;
+    display: block;
+    font-size: 2.5vw;
+}
+form input {
+    font-size: 2vw;
+    padding: 1em 0.5em;
+    background: 0%;
+    width: 80%;
+    border: 0.5px solid #737c84;
+}
+form button {
+    margin: 0.75em 2em;
+}
+@media only screen and (min-width: 600px) {
+header img {
+    max-width: 4vw;
+    margin-right: 1vw;
+}
+.logoer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    column-count: 1;
+}
+.logoer a {
+    display: inline-flex;
+    margin-bottom: 1vw; 
+    justify-content: flex-end;
+}
+a.svg {
+    display: inline-block;
+    margin: 0.5vw;
+    width: 16%;
+}
+a.svg:first-child {
+    margin-left: 5vw;
+}
+a.svg:last-child {
+    margin-right: 5vw;
+}
+footer {
+    column-count: 3;
+}
+footer section {
+    width: 30vw;
+    margin: 2vw 0;
+}
+.buttom {
+    margin: 2vw 0 0 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.slideshow-container img {
+    max-height: 30vw;
+}
+main article,
+main section,
+main form {
+    width: 30vw;
+    margin: 0.5em;
+}
+.intro {
+    width: 100%;
+}
+}
+@media only screen and (min-width: 960px) {   
+a.svg {
+    display: inline-block;
+    margin: 0.5vw;
+    width: 16%;
+}
+a.svg:first-child {
+    margin-left: 5vw;
+}
+a.svg:last-child {
+    margin-right: 5vw;
+}
+.navbar h3 {
+    margin: auto 2vw; 
+}
+.navbar {
+    height: 5.5vw;
+}
+.dropbtn {
+    display: none;
+}
+.dropdown-content {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+.dropdown-content a {
+    text-align: left;
+    color: #fff;
+    padding: 2vw;
+    font-size: 1.5vw;
+}
+footer {
+    column-count: 6;
+}
+footer section {
+    width: 14vw;
+    margin: 0.5vw;
+}
+}

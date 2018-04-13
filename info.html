@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="roskilde urban axis tour music guide event entertainment tourist family friendly art history food">
+    <meta name="description" content="Exerience Denmark outsite of Copenhagen, All widthin a short trainride">
+    <link href="fontawesome-free-5.0.7\web-fonts-with-css\css\fontawesome-all.css/" rel="stylesheet" type="text/css">
+    <link href="fontawesome-free-5.0.7\web-fonts-with-css\css\fontawesome-all.min.css" rel="stylesheet" type="text/css">
+    <link href="urbancss.css" rel="stylesheet" type="text/css">
+    <title>Urban Axis</title>
+    <meta>
+</head>
+<body>
+    <header>
+        <a href="indexeng.html"><img src="img/UNKjpg.jpg" alt="Engelsk flag som er et link"/></a>
+        <h5>For english click on the flag</h5>
+    </header>
+    <div class="logoer">
+        <a href="index.html"><img src="img/logo/urban_logo.svg" alt="urban axis logo"/></a>
+        <a href="roskilde.html"><img src="img/logo/urban_roskilde.svg" alt="Roskilde en del af Urban Axis"/></a> 
+    </div>   
+    <div class="navbar">
+    <h3>Destinationer</h3>
+        <nav class="dropdown">
+            <button class="dropbtn" onclick="myFunction()"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <ul class="dropdown-content" id="myDropdown">
+                <li><a href="index.html">Urban Axis</a></li>
+                <li><a href="roskilde.html">Roskilde</a></li>
+                <li><a href="sevaerdigheder.html">Seværdighder</a></li>
+                <li><a href="oplevelser.html">Oplevelser</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li class="current"><a href="info.html">Kontakt Os</a></li>
+            </ul>
+        </nav>
+    </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+        }
+    }
+}
+</script>
+<main>
+    <article>
+        <h4>Hvem er vi?</h4>
+        <p>Oplev Danmark udenfor København, alt indenfor en kort tog tur.</p>
+        <i class="fas fa-rss"></i>
+        <i class="fab fa-skype"></i>
+        <i class="fab fa-dribbble"></i>
+        <i class="fab fa-facebook-f"></i>
+    </article>
+    <form action="_">
+        <h4>Send os en besked</h4>
+        <label><input type="text" placeholder="*NAVN"></label>
+        <label><input type="text" placeholder="*E-MAIL"></label>
+        <label><input type="text" placeholder="*BESKED"></label>
+        <button type="submit" value="Submit">SEND BESKED</button>
+    </form>
+    <section>
+        <h4>Kontakt Info</h4>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Adresse</li>
+            <li><span class="fa-li"><i class="fas fa-mobile"></i></span>Tlf. nr.</li>
+            <li><span class="fa-li"><i class="fas fa-paper-plane"></i></span>E-mail</li>                    
+        </ul>
+    </section>
+</main>
+    <footer>
+        <section>
+            <h3><a href="index.html">Urban Axis</a></h3>
+            <ul>
+                <li><a href="info.html" class="current">Kontakt Os</a></li>   
+            </ul>
+        </section>
+        <section>
+            <h3><a href="detour.html">København</a></h3>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                  
+            </ul>
+        </section>   
+        <section class="break">
+            <h3><a href="roskilde.html">Roskilde</a></h3>
+            <ul>
+                <li><a href="sevaerdigheder.html">Seværdigheder</a></li>
+                <li><a href="oplevelser.html">Oplevelser</a></li>
+                <li><a href="maps.html">Maps</a></li>                   
+            </ul>
+        </section>  
+        <section>
+            <h3><a href="detour.html">Odense</a></h3>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                   
+            </ul>
+        </section>
+        <section>
+            <h3><a href="detour.html">Aalborg</a></h3>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                  
+            </ul>
+        </section>
+        <section>
+            <h3><a href="detour.html">Aarhus</a></h3>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                    
+            </ul>
+        </section> 
+        <div class="buttom"><p>&copy; Urban Axis 2018 - RTS - urban project Andreas</p></div>                      
+    </footer>
+</body>
+</html>
