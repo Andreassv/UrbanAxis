@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="roskilde urban axis tour music guide event entertainment tourist family friendly art history food">
+    <meta name="description" content="Exerience Denmark outsite of Copenhagen, All widthin a short trainride">
+    <link href="fontawesome-free-5.0.7\web-fonts-with-css\css\fontawesome-all.css/" rel="stylesheet" type="text/css">
+    <link href="fontawesome-free-5.0.7\web-fonts-with-css\css\fontawesome-all.min.css" rel="stylesheet" type="text/css">
+    <link href="urbancss.css" rel="stylesheet" type="text/css">
+    <title>Urban Axis</title>
+    <meta>
+</head>
+<body>
+    <header>
+        <a href="indexeng.html"><img src="img/UNKjpg.jpg" alt="Engelsk flag som er et link"/></a>
+        <h5>For english click on the flag</h5>
+    </header>
+    <div class="logoer">
+        <a href="index.html"><img src="img/logo/urban_logo.svg" alt="urban axis logo"/></a>
+        <a href="roskilde.html"><img src="img/logo/urban_roskilde.svg" alt="Roskilde en del af Urban Axis"/></a> 
+    </div>   
+    <div class="navbar">
+    <h3>Destinationer</h3>
+    <button class="dropbtn" onclick="myFunction()"><i class="fas fa-bars" aria-hidden="true"></i></button>
+        <nav class="dropdown">
+            <ul class="dropdown-content" id="myDropdown">
+                <li><a href="index.html">Urban Axis</a></li>
+                <li class="current"><a href="roskilde.html">Roskilde</a></li>
+                <li><a href="sevaerdigheder.html">Seværdighder</a></li>
+                <li><a href="oplevelser.html">Oplevelser</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="info.html">Kontakt Os</a></li>
+            </ul>
+        </nav>
+    </div>
+<main>
+    <article class="intro">
+        <h3>Roskilde er byen for alle mennesker som elsker kultur, musik og oplevelser</h3>
+    </article>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img\IMG_0864.jpg" style="width:100%">
+        </div>    
+        <div class="mySlides fade">
+            <img src="img\IMG_0871.jpg" style="width:100%">
+        </div> 
+        <div class="mySlides fade">
+            <img src="img\IMG_0893.jpg" style="width:100%">
+        </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+    </div>
+</main>
+    <footer>
+        <section>
+            <h5><a href="index.html">Urban Axis</a></h5>
+            <ul>
+                <li><a href="info.html">Kontakt Os</a></li>   
+            </ul>
+        </section>
+        <section>
+            <h5><a href="detour.html">København</a></h5>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                  
+            </ul>
+        </section>   
+        <section class="break">
+            <h5><a href="roskilde.html" class="current">Roskilde</a></h5>
+            <ul>
+                <li><a href="sevaerdigheder.html">Seværdigheder</a></li>
+                <li><a href="oplevelser.html">Oplevelser</a></li>
+                <li><a href="maps.html">Maps</a></li>                   
+            </ul>
+        </section>  
+        <section>
+            <h5><a href="detour.html">Odense</a></h5>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                   
+            </ul>
+        </section>
+        <section>
+            <h5><a href="detour.html">Aalborg</a></h5>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                  
+            </ul>
+        </section>
+        <section>
+            <h5><a href="detour.html">Aarhus</a></h5>
+            <ul>
+                <li><a href="detour.html">Seværdigheder</a></li>
+                <li><a href="detour.html">Oplevelser</a></li>
+                <li><a href="detour.html">Maps</a></li>                    
+            </ul>
+        </section> 
+        <div class="buttom"><p>&copy; Urban Axis 2018 - RTS - urban project Andreas</p></div>                      
+    </footer>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+            }
+        }
+    }
+    </script>
+    <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }        
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+                for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+    }
+    </script>
+</body>
+</html>
